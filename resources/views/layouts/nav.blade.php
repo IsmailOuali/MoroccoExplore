@@ -1,7 +1,7 @@
 <header class="bg-black">
     <div class="object-top opacity-70 bg-gradient-to-r from-sky-500 to-indigo-200 bg-cover rounded">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="{{ route('home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/images/logo.png" class="h-16" alt="Flowbite Logo" />
                 <span class="self-center text-3xl text-white font-bold whitespace-nowrap">MoroccoExplorer</span>
               </a>
@@ -17,19 +17,19 @@
               <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
                   <ul class="flex flex-col font-medium p-4 bg-transparent md:p-0 mt-4  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                   <li>
-                    <a href="{{ route('home') }}" class="block py-2 px-3 md:p-0 text-white text-2xl rounded   md:hover:text-amber-500">Home</a>
+                    <a href="{{ route('home') }}" class="underline block py-2 px-3 md:p-0 text-white text-2xl rounded   md:hover:text-amber-500">Home</a>
                   </li>
                   <li>
-                    <a href="{{ route('store') }}" class="block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Store</a>
+                    <a href="{{ route('store') }}" class="underline block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Store</a>
                   </li>
                   <li>
-                    <a href="{{ route('travel') }}" class="block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Travel</a>
+                    <a href="{{ route('travel') }}" class="underline block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Travel</a>
                   </li>
                   <li>
-                    <a href="{{ route('blog') }}" class="block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Blog</a>
+                    <a href="{{ route('blog') }}" class="underline block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Blog</a>
                   </li>
                   <li>
-                    <a href="{{ route('contact') }}" class="block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Contact</a>
+                    <a href="{{ route('contact') }}" class="underline block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Contact</a>
                   </li>
                 </ul>
               </div>

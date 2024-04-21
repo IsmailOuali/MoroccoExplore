@@ -30,15 +30,18 @@
 
         @include('layouts.nav')
         <!-- Hero Start -->
-        <section class="relative md:py-24 py-16 bg-indigo-200 ">
+        <section class="relative md:py-24 py-16 bg-blue-200 ">
             <div class="container relative">
                 <div class="flex justify-center items-center py-8 w-screen">
                     <form class="" action="">
                         <input class="h-10 pr-2 bg-gray-200 rounded text-2xl font-semibold border-none" type="text" placeholder="Search">
                         <button class="bg-red-200 p-2 w-24 m-auto text-black font-semibold text-xl rounded-full hover:bg-gray-800 hover:text-white">Search</button>
                     </form>
-                    <select class="mx-4 inline-block bg-gray-200 rounded mx-4 pr-8 text-2xl font-semibold" name="Category" id="">
+                    <select class="mx-4 inline-block bg-gray-200 rounded-2xl mx-4 pr-8 text-2xl font-semibold" name="Category" id="">
                         <option value="">Category</option>
+                    </select>
+                    <select class="mx-4 inline-block bg-gray-200 rounded-2xl  mx-4 pr-8 text-2xl font-semibold" name="Destination" id="">
+                        <option value="">Destination</option>
                     </select>
                 </div>
                 <div class="grid lg:grid-cols-2 grid-cols-1 gap-6">                    
@@ -69,7 +72,7 @@
                                 <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
                                     <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
 
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
+                                    <a href="" class="text-black font-bold underline hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
