@@ -37,4 +37,9 @@ class categoryRepository extends BaseRepository implements categoryRepositoryInt
 
         ];
     }
+
+    public function getAll()
+    {
+        return Category::all();
+    }
 }

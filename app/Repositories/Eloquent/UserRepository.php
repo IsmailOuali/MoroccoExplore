@@ -37,16 +37,13 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
         switch ($user->role) {
             case 'Client':
                 $client = Client::create(['user_id'=> $user->id]);
-                return  redirect()->route('home');            
             case 'Artisan':
                 $artisan = Artisan::create(['user_id'=> $user->id]);
                 break;
 
             case 'Guide':
                 $guide = Guide::create(['user_id'=> $user->id]);
-                break;
-            
-                
+                break; 
             }
     }
 

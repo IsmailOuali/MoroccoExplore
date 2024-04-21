@@ -152,9 +152,9 @@
 
                     <div class="flex items-center" id="store-nav-content">
 
-                        <div class="pl-3 inline-block no-underline hover:text-black" href="#">
+                        <div class="pl-3 inline-block no-underline hover:text-black">
                             <input class="mx-8 ml-3 h-10 pr-2 bg-gray-200 rounded text-2xl font-semibold border-none " type="text" placeholder="Search...">
-                            <button class="bg-red-200 p-2 w-24 m-auto text-black font-semibold text-xl rounded-full">Search</button>
+                            <button class="bg-red-200 p-2 w-24 m-auto text-black font-semibold text-xl border border-black rounded-full hover:bg-red-400">Search</button>
                         </div>
 
 

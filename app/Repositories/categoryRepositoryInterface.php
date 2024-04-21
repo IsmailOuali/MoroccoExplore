@@ -9,5 +9,6 @@ interface categoryRepositoryInterface
    // Extend with your methods
 
    public function store(storeCategoryDTO $request);
+   public function getAll();
 
 }

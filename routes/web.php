@@ -38,6 +38,10 @@ Route::get('/client/dashboard', function () {
     return view('client/dashboard');
 })->name('dashboard');
 
+Route::get('/client/dashboardGuide', function () {
+    return view('client/dashboardGuide');
+})->name('dashboardGuide');
+
 
 Route::post('/register', [AuthController::class , 'register'])->name('login');
 Route::post('/login', [AuthController::class , 'login']);

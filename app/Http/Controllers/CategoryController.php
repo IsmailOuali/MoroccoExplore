@@ -12,14 +12,18 @@ use App\Repositories\categoryRepositoryInterface;
 class CategoryController extends Controller
 {
     public function __construct(public categoryRepositoryInterface $repository)
-    {}
+    {
+        
+    }
 
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): JsonResponse 
     {
-        //
+        return response()->json([
+            'data' => $this->orderRepository->getAll()
+        ]);
     }
 
     /**
