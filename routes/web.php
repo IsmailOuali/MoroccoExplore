@@ -13,28 +13,35 @@ Route::get('/', function () {
 Route::get('/Auth/login', function () {
     return view('Auth/login');
 });
+
 Route::get('/Auth/register', function () {
     return view('Auth/register');
 });
 
 Route::get('/client/home', function () {
     return view('client/home');
-})->name('home');;
+})->name('home');
+
 Route::get('/client/store', function () {
     return view('client/store');
 })->name('store');
+
 Route::get('/client/blog', function () {
     return view('client/blog');
 })->name('blog');
+
 Route::get('/client/contact', function () {
     return view('client/contact');
 })->name('contact');
+
 Route::get('/client/single', function () {
     return view('client/single');
 })->name('single');
+
 Route::get('/client/travel', function () {
     return view('client/travel');
 })->name('travel');
+
 Route::get('/client/dashboard', function () {
     return view('client/dashboard');
 })->name('dashboard');
@@ -42,6 +49,13 @@ Route::get('/client/dashboard', function () {
 Route::get('/client/dashboardGuide', function () {
     return view('client/dashboardGuide');
 })->name('dashboardGuide');
+
+Route::get('/client/project', function () {
+    return view('client/project');
+})->name('project');
+Route::get('/client/singleBlog', function () {
+    return view('client/singleBlog');
+})->name('singleBlog');
 
 
 Route::post('/register', [AuthController::class , 'register'])->name('login');

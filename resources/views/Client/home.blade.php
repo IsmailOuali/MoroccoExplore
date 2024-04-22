@@ -17,7 +17,7 @@
             </div>
         </header>
 
-        <section class="bg-amber-600 opacity-65">
+        <section class="bg-amber-600 opacity-75">
             <div class="flex items-center justify-center pt-8">
                 <p class="text-3xl text-white font-bold">A discuter</p>
             </div>
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </section>
-        <section class="opacity-65 bg-amber-500">
+        <section class="opacity-75 bg-amber-500 flex">
 
         <div class="w-1/2 p-16">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -100,6 +100,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="w-1/2 p-16">
+            <h3 class="text-white underline text-center font-bold text-3xl p-8">Best Recomended Destinations</h3>
+            <p class="text-center p-8 font-semibold text-xl">Best Recomended Destination Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi deleniti, numquam reiciendis cum, similique perferendis laboriosam nihil doloremque suscipit molestias ea consequuntur quam facilis eos, officiis nulla. Quae, laudantium facilis.</p>
         </div>
             
         </section>

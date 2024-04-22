@@ -31,6 +31,9 @@
                   <li>
                     <a href="{{ route('contact') }}" class="underline block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Contact</a>
                   </li>
+                  <li>
+                    <a href="{{ route('project') }}" class="underline block py-2 px-3 md:p-0 text-white text-2xl rounded md:hover:bg-transparent md:hover:text-amber-700">Projects</a>
+                  </li>
                 </ul>
               </div>
         </div>

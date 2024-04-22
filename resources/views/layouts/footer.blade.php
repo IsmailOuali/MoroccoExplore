@@ -12,6 +12,7 @@
             <a href="{{ route('travel') }}" class="p-8 text-2xl font-semibold underline hover:text-yellow-200">Travels</a>
             <a href="{{ route('blog') }}" class="p-8 text-2xl font-semibold underline hover:text-yellow-200">Blog</a>
             <a href="{{ route('contact') }}" class="p-8 text-2xl font-semibold underline hover:text-yellow-200">Contact</a>
+            <a href="{{ route('project') }}" class="p-8 text-2xl font-semibold underline hover:text-yellow-200">Projects</a>
         </div>
     </div>
 </footer>
