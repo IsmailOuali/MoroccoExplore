@@ -16,4 +16,5 @@ class Produit extends Model
         'category_id',
         'file',
     ];
+    
 }

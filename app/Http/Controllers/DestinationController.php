@@ -3,17 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destination;
+use App\DTO\storeDestinationDTO;
 use App\Http\Requests\StoreDestinationRequest;
 use App\Http\Requests\UpdateDestinationRequest;
+use App\Repositories\DestinationRepositoryInterface;
+use Illuminate\Support\Facades\View;
 
 class DestinationController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+
+    public function __construct(public destinationRepositoryInterface $repository)
     {
-        //
+ 
+    }
+ 
+    public function index(): \Illuminate\Contracts\View\View 
+    {
+        $destinations = $this->repository->getAllDestinations();
+        return View::make('/client/dashboardGuide', ['destinations'=>$destinations]);
     }
 
     /**
@@ -29,7 +39,8 @@ class DestinationController extends Controller
      */
     public function store(StoreDestinationRequest $request)
     {
-        //
+        $storeDestinationDTO = storeDestinationDTO::fromRequest($request);
+        $this->repository->store($storeDestinationDTO);
     }
 
     /**

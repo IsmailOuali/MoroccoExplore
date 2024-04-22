@@ -7,8 +7,9 @@ use App\Models\User;
 use App\Models\Guide;
 use App\Models\Client;
 use App\Models\Artisan;
-use App\DTO\Auth\registerDTO;
 use App\DTO\Auth\loginDTO;
+use App\DTO\Auth\registerDTO;
+use Illuminate\Support\Facades\Auth;
 use App\Repositories\UserRepositoryInterface;
 use TimWassenburg\RepositoryGenerator\Repository\BaseRepository;
 
@@ -37,12 +38,17 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
         switch ($user->role) {
             case 'Client':
                 $client = Client::create(['user_id'=> $user->id]);
+                return abort(redirect('/client/home'));
+
             case 'Artisan':
                 $artisan = Artisan::create(['user_id'=> $user->id]);
-                break;
+                return abort(redirect('/client/dashboard'));
+
 
             case 'Guide':
                 $guide = Guide::create(['user_id'=> $user->id]);
+                return abort(redirect('/client/dashboardGuide'));
+
                 break; 
             }
     }
@@ -69,7 +75,22 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
     public function login(loginDTO $loginDTO){
         $data = $this->getArrayl($loginDTO);
         if (Auth::attempt($data)){
+            $user = Auth::user();
             echo 'login successfully';
+            switch ($user->role) {
+                case 'Client':
+                    return abort(redirect('/client/home'));
+                    break;
+                case 'Artisan':
+                    return abort(redirect('/client/dashboard'));
+                    break;
+                case 'Guide':
+                    return abort(redirect('/client/store'));
+                    break;
+                
+                default:
+                    break;
+            }
         }else{
             return view('login');
         }

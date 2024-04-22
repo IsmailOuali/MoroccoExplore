@@ -24,7 +24,7 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 
     public function store(storeProduitDTO $request)
     {
-        $data = $this->getArray($storeProduitDTO);
+        $data = $this->getArray($request);
         $produit = Produit::create($data);
         return $produit;
 
@@ -38,6 +38,10 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
             'category_id'=> $storeProduitDTO->category_id,
             'price'=> $storeProduitDTO->price,
         ];
+    }
+
+    public function getAllProduits(){
+        return Produit::all();
     }
     
 }

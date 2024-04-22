@@ -9,6 +9,7 @@
     </head>
     <body class="bg-black">
         @include('layouts.nav')
+        <h1 class="text-center font-bold text-blue-800 ">Guide Dashboard</h1>
         <main class="flex">
 
             <section class="bg-sky-200 w-1/2">
@@ -119,7 +120,7 @@
             <section class="bg-sky-200 w-1/2">
                 <div class="max-w-2xl px-4 py-8 mx-auto lg:py-16">
 
-                    <form action="/storeCat" method="post">
+                    <form action="/storeDest" method="post">
                         @csrf
                         <div class="sm:col-span-2 p-4">
                             <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">Destination name</label>
@@ -128,6 +129,53 @@
                         <div class="flex items-center space-x-4 p-4">
                             <button type="submit" class="text-black bg-sky-600 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-600 dark:focus:ring-primary-800">
                                 Add Destination
+                            </button>
+                        </div>
+                    </form>
+                    <div class="flex flex-col bg-gray-200 text-black">
+                        <div class="-m-1.5 overflow-x-auto">
+                          <div class="p-1.5 min-w-full inline-block align-middle">
+                            <div class="overflow-hidden rounded">
+                              <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700 ">
+                                <thead>
+                                  <tr>
+                                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium  uppercase ">ID</th>
+                                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium  uppercase ">Name</th>
+                                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium  uppercase ">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="divide-y ">
+                                    @foreach ($destinations as $destination)
+                                        
+                                    <tr>
+                                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">{{ $destination->id }}</td>
+                                      <td class="px-6 py-4 whitespace-nowrap text-sm ">{{ $destination->name }}</td>
+                                      <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                                        <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Delete</button>
+                                      </td>
+                                    </tr>
+                                    @endforeach
+                
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </section>
+            <section class="bg-sky-200 w-1/2">
+                <div class="max-w-2xl px-4 py-8 mx-auto lg:py-16">
+
+                    <form action="/storeType" method="post">
+                        @csrf
+                        <div class="sm:col-span-2 p-4">
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">Type Voyage name</label>
+                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-primary-500 dark:focus:border-primary-500 text-white" value="fest" placeholder="Type Type Voyage name" required="">
+                        </div>
+                        <div class="flex items-center space-x-4 p-4">
+                            <button type="submit" class="text-black bg-sky-600 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-600 dark:focus:ring-primary-800">
+                                Add Type Voyage
                             </button>
                         </div>
                     </form>

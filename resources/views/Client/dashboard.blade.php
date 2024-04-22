@@ -9,6 +9,8 @@
     </head>
     <body class="bg-black">
         @include('layouts.nav')
+        <h1 class="text-center font-bold text-blue-800 ">Artisan Dashboard</h1>
+
         <main class="flex">
 
             <section class="bg-sky-200 w-1/2">
@@ -32,7 +34,7 @@
                             </div>
                             <div>
                                 <label for="category" class="block mb-2 text-sm font-medium text-gray-900 ">Category</label>
-                                <select name="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                <select name="category_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                     @foreach ($categories as $category)
                                         
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -72,54 +74,36 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($produits as $produit)
                                 <tr class="border-b border-opacity-20 border-gray-700 bg-blue-400">
                                     <td class="p-3">
-                                        <p>97412378923</p>
+                                        <p>{{ $produit->id }}</p>
                                     </td>
                                     <td class="p-3">
-                                        <p>Tesla Inc.</p>
+                                        <p>{{ $produit->name }}</p>
                                     </td>
                                     <td class="p-3">
-                                        <p>14 Jan 2022</p>
-                                        <p class="text-gray-400">Friday</p>
+                                        <p>{{ $produit->category_id }}</p>
                                     </td>
  
                                     <td class="p-3 text-right">
-                                        <p>$275</p>
+                                        <p>${{ $produit->price }}</p>
                                     </td>
                                     <td class="p-3 text-right flex gap-2">
                                         <button class="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
                                             edit
                                         </button>
-                                        <button class="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
-                                            delete
-                                        </button>
+                                        <form action="{{ route('produits.destroy', $produit->id) }}" method="post">
+                                            @method('DELETE')
+                                            <button type="submit" class="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
+                                                delete
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
-                                <tr class="border-b border-opacity-20 border-gray-700 bg-blue-400">
-                                    <td class="p-3">
-                                        <p>97412378923</p>
-                                    </td>
-                                    <td class="p-3">
-                                        <p>Tesla Inc.</p>
-                                    </td>
-                                    <td class="p-3">
-                                        <p>14 Jan 2022</p>
-                                        <p class="text-gray-400">Friday</p>
-                                    </td>
+                                    
+                                @endforeach
 
-                                    <td class="p-3 text-right">
-                                        <p>$275</p>
-                                    </td>
-                                    <td class="p-3 text-right flex gap-2">
-                                        <button class="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
-                                            edit
-                                        </button>
-                                        <button class="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
-                                            delete
-                                        </button>
-                                    </td>
-                                </tr>
 
                             </tbody>
                         </table>

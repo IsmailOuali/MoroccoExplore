@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DestinationController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,9 +47,14 @@ Route::get('/client/dashboardGuide', function () {
 Route::post('/register', [AuthController::class , 'register'])->name('login');
 Route::post('/login', [AuthController::class , 'login']);
 
-Route::post('/store', [ProduitController::class , 'store']);
 
 Route::get('/client/dashboard', [CategoryController::class , 'index'])->name('categories.index');
 Route::post('/storeCat', [CategoryController::class , 'store']);
 Route::delete('/categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
+Route::get('/client/dashboard', [ProduitController::class , 'index'])->name('produits.index');
+Route::post('/store', [ProduitController::class , 'store']);
+Route::delete('/produits/{produit}', [ProduitController::class , 'destroy'])->name('produits.destroy');
+
+Route::post('/storeDest', [DestinationController::class, 'store']);
+Route::get('/client/dashboardGuide', [DestinationController::class, 'index'])->name('destinations.index');

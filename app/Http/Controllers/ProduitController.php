@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produit;
+use App\Models\Category;
 use App\DTO\Auth\storeProduitDTO;
+use Illuminate\Support\Facades\View;
 use App\Http\Requests\StoreProduitRequest;
 use App\Http\Requests\UpdateProduitRequest;
 use App\Repositories\ProductRepositoryInterface;
+
 
 class ProduitController extends Controller
 {
@@ -18,9 +21,13 @@ class ProduitController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): \Illuminate\Contracts\View\View 
     {
-        //
+        $produits = $this->repository->getAllProduits();
+        $categories = Category::all();
+        return View::make('/client/dashboard', ['produits'=> $produits,
+        'categories'=> $categories, 
+    ]);
     }
 
     /**
@@ -69,6 +76,8 @@ class ProduitController extends Controller
      */
     public function destroy(Produit $produit)
     {
-        //
+        $produit->delete();
+
+        return redirect()->route('categories.index')->with('success', 'produit deleted successfully.');
     }
 }

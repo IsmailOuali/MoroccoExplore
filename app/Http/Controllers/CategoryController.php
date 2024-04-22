@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produit;
 use App\Models\Category;
 use App\DTO\Auth\storeCategoryDTO;
+use Illuminate\Support\Facades\View;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Repositories\categoryRepositoryInterface;
 use App\Repositories\Eloquent\categoryRepository;
-use Illuminate\Support\Facades\View;
 
 
 class CategoryController extends Controller
@@ -24,7 +25,8 @@ class CategoryController extends Controller
     public function index(): \Illuminate\Contracts\View\View 
     {
         $categories = $this->repository->getAll();
-        return View::make('/client/dashboard', compact('categories'));
+        $produits = Produit::all();
+        return View::make('/client/dashboard', ['categories'=>$categories, 'produits'=>$produits]);
     }
 
     /**

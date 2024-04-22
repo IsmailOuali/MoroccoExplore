@@ -8,4 +8,5 @@ interface ProductRepositoryInterface
 {
    // Extend with your methods
    public function store(storeProduitDTO $request);
+   public function getAllProduits();
 }
