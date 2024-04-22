@@ -34,7 +34,7 @@ class ProduitController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProductRequest $request)
+    public function store(StoreProduitRequest $request)
     {
         $storeProductDTO = storeProduitDTO::fromRequest($request);
         $this->repository->store($storeProductDTO);

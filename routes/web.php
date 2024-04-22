@@ -45,5 +45,10 @@ Route::get('/client/dashboardGuide', function () {
 
 Route::post('/register', [AuthController::class , 'register'])->name('login');
 Route::post('/login', [AuthController::class , 'login']);
+
 Route::post('/store', [ProduitController::class , 'store']);
+
+Route::get('/client/dashboard', [CategoryController::class , 'index'])->name('categories.index');
 Route::post('/storeCat', [CategoryController::class , 'store']);
+Route::delete('/categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+

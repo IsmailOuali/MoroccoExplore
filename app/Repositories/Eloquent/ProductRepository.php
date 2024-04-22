@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Eloquent;
 
-use App\Models\Product;
+use App\Models\Produit;
 use App\DTO\Auth\storeProduitDTO;
 use App\Repositories\ProductRepositoryInterface;
 use TimWassenburg\RepositoryGenerator\Repository\BaseRepository;
@@ -17,15 +17,16 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
      *
      * @param Product $model
      */
-    public function __construct(Product $model)
+    public function __construct(Produit $model)
     {
         parent::__construct($model);
     }
 
     public function store(storeProduitDTO $request)
     {
-        $data = $this->getArray($request);
-        $produit = Product::create($data);
+        $data = $this->getArray($storeProduitDTO);
+        $produit = Produit::create($data);
+        return $produit;
 
     }
     private function getArray(storeProduitDTO $storeProduitDTO)
@@ -35,7 +36,7 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
             'name'=> $storeProduitDTO->name,
             'description'=> $storeProduitDTO->description,
             'category_id'=> $storeProduitDTO->category_id,
-            'price'=> $storeProduitDTO->role,
+            'price'=> $storeProduitDTO->price,
         ];
     }
     

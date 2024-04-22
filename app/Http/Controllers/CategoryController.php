@@ -7,23 +7,24 @@ use App\DTO\Auth\storeCategoryDTO;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Repositories\categoryRepositoryInterface;
+use App\Repositories\Eloquent\categoryRepository;
+use Illuminate\Support\Facades\View;
 
 
 class CategoryController extends Controller
 {
     public function __construct(public categoryRepositoryInterface $repository)
     {
-        
+
     }
 
     /**
      * Display a listing of the resource.
      */
-    public function index(): JsonResponse 
+    public function index(): \Illuminate\Contracts\View\View 
     {
-        return response()->json([
-            'data' => $this->orderRepository->getAll()
-        ]);
+        $categories = $this->repository->getAll();
+        return View::make('/client/dashboard', compact('categories'));
     }
 
     /**
@@ -72,6 +73,9 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return redirect()->route('categories.index')->with('success', 'Category deleted successfully.');
+
     }
 }

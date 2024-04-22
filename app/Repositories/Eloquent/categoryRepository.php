@@ -26,7 +26,6 @@ class categoryRepository extends BaseRepository implements categoryRepositoryInt
     {
         $data = $this->getArray($request);
         $category = Category::create($data);
-        return abort(redirect('/client/dashboard'));
 
     }
     private function getArray(storeCategoryDTO $storeCategoryDTO)
