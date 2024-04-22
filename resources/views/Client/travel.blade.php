@@ -77,115 +77,22 @@
                             </div>
                         </div>
                     </div><!--end content-->
-
                     <div class="group rounded-md shadow dark:shadow-gray-700">
                         <div class="md:flex md:items-center">
                             <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/2.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
-
-                                <div class="absolute top-0 end-0 p-4">
-                                    <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Italy</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Tour in New York</a>
-
-                                <div class="flex items-center mt-2">
-                                    <span class="text-slate-400">Rating:</span>
-                                    <ul class="text-lg font-medium text-amber-400 list-none ms-2">
-                                        <li class="inline text-black dark:text-white text-sm">5.0(30)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
-
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end content-->
-                    
-
-                    
-                    <div class="group rounded-md shadow dark:shadow-gray-700">
-                        <div class="md:flex md:items-center">
-                            <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/4.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
-
-                                <div class="absolute top-0 end-0 p-4">
-                                    <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> USA</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Museum of Modern Art</a>
-
-                                <div class="flex items-center mt-2">
-                                    <span class="text-slate-400">Rating:</span>
-                                    <ul class="text-lg font-medium text-amber-400 list-none ms-2">
-                                        <li class="inline text-black dark:text-white text-sm">5.0(30)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
-
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end content-->
-                    
-                    <div class="group rounded-md shadow dark:shadow-gray-700">
-                        <div class="md:flex md:items-center">
-                            <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/5.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
-
-                                <div class="absolute top-0 end-0 p-4">
-                                    <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Bali</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Peek Mountain View</a>
-
-                                <div class="flex items-center mt-2">
-                                    <span class="text-slate-400">Rating:</span>
-                                    <ul class="text-lg font-medium text-amber-400 list-none ms-2">
-                                        <li class="inline text-black dark:text-white text-sm">5.0(30)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
-
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end content-->
-                    
-                    <div class="group rounded-md shadow dark:shadow-gray-700">
-                        <div class="md:flex md:items-center">
-                            <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/6.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
+                                <img src="assets/images/listing/1.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
                                 <div class="absolute top-0 start-0 p-4">
-                                    <span class="bg-red-500 text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">25% Off</span>
+                                    <span class="bg-red-500 text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">10% Off</span>
                                 </div>
-
+    
                                 <div class="absolute top-0 end-0 p-4">
                                     <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
                                 </div>
                             </div>
-
+                            
                             <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Bangkok</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Hot Baloon Journey</a>
+                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Dubai</p>
+                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Cuba Sailing Adventure</a>
 
                                 <div class="flex items-center mt-2">
                                     <span class="text-slate-400">Rating:</span>
@@ -197,58 +104,27 @@
                                 <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
                                     <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
 
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
+                                    <a href="" class="text-black font-bold underline hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div><!--end content-->
-                    
                     <div class="group rounded-md shadow dark:shadow-gray-700">
                         <div class="md:flex md:items-center">
                             <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/7.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
-
-                                <div class="absolute top-0 end-0 p-4">
-                                    <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Singapore</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Orca Camp Kayaking Trip</a>
-
-                                <div class="flex items-center mt-2">
-                                    <span class="text-slate-400">Rating:</span>
-                                    <ul class="text-lg font-medium text-amber-400 list-none ms-2">
-                                        <li class="inline text-black dark:text-white text-sm">5.0(30)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
-
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end content-->
-                    
-                    <div class="group rounded-md shadow dark:shadow-gray-700">
-                        <div class="md:flex md:items-center">
-                            <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/8.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
+                                <img src="assets/images/listing/1.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
                                 <div class="absolute top-0 start-0 p-4">
-                                    <span class="bg-red-500 text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">20% Off</span>
+                                    <span class="bg-red-500 text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">10% Off</span>
                                 </div>
-
+    
                                 <div class="absolute top-0 end-0 p-4">
                                     <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
                                 </div>
                             </div>
-
+                            
                             <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Thailand</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Caño Cristales River Trip</a>
+                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Dubai</p>
+                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Cuba Sailing Adventure</a>
 
                                 <div class="flex items-center mt-2">
                                     <span class="text-slate-400">Rating:</span>
@@ -260,131 +136,13 @@
                                 <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
                                     <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
 
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
+                                    <a href="" class="text-black font-bold underline hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div><!--end content-->
                     
-                    <div class="group rounded-md shadow dark:shadow-gray-700">
-                        <div class="md:flex md:items-center">
-                            <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/9.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
-
-                                <div class="absolute top-0 end-0 p-4">
-                                    <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Pattaya</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Osa Peninsula to Dominical</a>
-
-                                <div class="flex items-center mt-2">
-                                    <span class="text-slate-400">Rating:</span>
-                                    <ul class="text-lg font-medium text-amber-400 list-none ms-2">
-                                        <li class="inline text-black dark:text-white text-sm">5.0(30)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
-
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end content-->
                     
-                    <div class="group rounded-md shadow dark:shadow-gray-700">
-                        <div class="md:flex md:items-center">
-                            <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/10.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
-
-                                <div class="absolute top-0 end-0 p-4">
-                                    <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Lakshadweep</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">History of The Emporer</a>
-
-                                <div class="flex items-center mt-2">
-                                    <span class="text-slate-400">Rating:</span>
-                                    <ul class="text-lg font-medium text-amber-400 list-none ms-2">
-                                        <li class="inline text-black dark:text-white text-sm">5.0(30)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
-
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end content-->
-                    
-                    <div class="group rounded-md shadow dark:shadow-gray-700">
-                        <div class="md:flex md:items-center">
-                            <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/11.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
-
-                                <div class="absolute top-0 end-0 p-4">
-                                    <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> Paris</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">Wildness of Paris</a>
-
-                                <div class="flex items-center mt-2">
-                                    <span class="text-slate-400">Rating:</span>
-                                    <ul class="text-lg font-medium text-amber-400 list-none ms-2">
-                                        <li class="inline text-black dark:text-white text-sm">5.0(30)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
-
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end content-->
-                    
-                    <div class="group rounded-md shadow dark:shadow-gray-700">
-                        <div class="md:flex md:items-center">
-                            <div class="relative overflow-hidden md:shrink-0 md:rounded-md rounded-t-md shadow dark:shadow-gray-700 md:m-3 mx-3 mt-3">
-                                <img src="assets/images/listing/12.jpg" class="h-full w-full object-cover md:w-48 md:h-56 scale-125 group-hover:scale-100 duration-500" alt="">
-
-                                <div class="absolute top-0 end-0 p-4">
-                                    <a href="javascript:void(0)" class="size-8 inline-flex justify-center items-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-500 dark:focus:text-red-500 hover:text-red-500 dark:hover:text-red-500"><i class="mdi mdi-heart text-[20px] align-middle"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="p-4 w-full">
-                                <p class="flex items-center text-slate-400 font-medium mb-2"><i data-feather="map-pin" class="text-red-500 size-4 me-1"></i> London</p>
-                                <a href="tour-detail-one.html" class="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">The Hills and Mountains</a>
-
-                                <div class="flex items-center mt-2">
-                                    <span class="text-slate-400">Rating:</span>
-                                    <ul class="text-lg font-medium text-amber-400 list-none ms-2">
-                                        <li class="inline text-black dark:text-white text-sm">5.0(30)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 class="text-lg font-medium text-red-500">$ 58 / Day</h5>
-
-                                    <a href="" class="text-slate-400 hover:text-red-500">Explore Now <i class="mdi mdi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end content-->
                 </div><!--end grid-->
 
                 <div class="grid md:grid-cols-12 grid-cols-1 mt-6">
@@ -534,20 +292,8 @@
 
 
 
-        </section><!--end section-->
-        <!-- End -->
+        </section>
 
-        <!-- Switcher -->
-        <div class="fixed top-1/4 -left-2 z-50">
-            <span class="relative inline-block rotate-90">
-                <input type="checkbox" class="checkbox opacity-0 absolute" id="chk">
-                <label class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" for="chk">
-                    <i data-feather="moon" class="w-[18px] h-[18px] text-yellow-500"></i>
-                    <i data-feather="sun" class="w-[18px] h-[18px] text-yellow-500"></i>
-                    <span class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
-                </label>
-            </span>
-        </div>
         
 
 

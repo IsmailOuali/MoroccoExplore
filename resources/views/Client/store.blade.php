@@ -12,6 +12,8 @@
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
 
         <style>
+
+
             .work-sans {
                 font-family: 'Work Sans', sans-serif;
             }
@@ -76,7 +78,7 @@
     </nav>
 
 
-    <div class="carousel relative container mx-auto " style="max-width:1600px;">
+    <div class="carousel relative container mx-auto overflow-x-hidden" style="">
         <div class="carousel-inner relative overflow-hidden w-full">
             <!--Slide 1-->
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">

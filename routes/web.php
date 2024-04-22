@@ -53,9 +53,18 @@ Route::get('/client/dashboardGuide', function () {
 Route::get('/client/project', function () {
     return view('client/project');
 })->name('project');
+
+Route::get('/client/singleTravel', function () {
+    return view('client/singleTravel');
+})->name('singleTravel');
+
 Route::get('/client/singleBlog', function () {
     return view('client/singleBlog');
 })->name('singleBlog');
+
+Route::get('/admin/dashboardAdmin', function () {
+    return view('admin/dashboardAdmin');
+})->name('dashboardAdmin');
 
 
 Route::post('/register', [AuthController::class , 'register'])->name('login');

@@ -1,5 +1,5 @@
 <header class="bg-black">
-    <div class="object-top opacity-70 bg-gradient-to-r from-sky-500 to-indigo-200 bg-cover rounded">
+    <div class="object-top opacity-80 bg-gradient-to-r from-sky-500 to-indigo-200 bg-cover rounded">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="{{ route('home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/images/logo.png" class="h-16" alt="Flowbite Logo" />
