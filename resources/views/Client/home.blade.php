@@ -12,7 +12,7 @@
         <header class="">
             @include('layouts.nav')
             <div class="w-full  flex flex-col items-center justify-center h-screen bg-[url('/images/bg-home1.png')] bg-cover">   
-                <p class="pt-32 text-amber-600 font-bold flex  items-center text-center justify-center text-8xl">Discover<br>Moroccan Vibes</p>
+                <p id="typewriter" class="pt-32 text-amber-600 font-bold flex  items-center text-center justify-center text-8xl"></p>
                 <button type="button" class="w-28 mt-8 text-gray-900 font-bold bg-gradient-to-r from-amber-200 via-amber-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">More</button>
             </div>
         </header>
@@ -109,6 +109,36 @@
         </section>
         @include('layouts.footer')
 
+    <script>
+        const words = ["Discover", "Moroccan Vibes."];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
 
+    function type() {
+    currentWord = words[i];
+    if (isDeleting) {
+        document.getElementById("typewriter").textContent = currentWord.substring(0, j-1);
+        j--;
+        if (j == 0) {
+        isDeleting = false;
+        i++;
+        if (i == words.length) {
+            i = 0;
+        }
+        }
+    } else {
+        document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
+        j++;
+        if (j == currentWord.length) {
+        isDeleting = true;
+        }
+    }
+    setTimeout(type, 200);
+    }
+
+    type();
+    </script>
     </body>
 </html>

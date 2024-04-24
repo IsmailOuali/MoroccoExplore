@@ -11,7 +11,7 @@
     <body class="bg-black">
       @include('layouts.nav')
 
-          <section class="py-6 sm:py-12 bg-sky-800" >
+          <section class="py-6 sm:py-12 bg-blue-200" >
 
             <div class="container p-6 mx-auto space-y-8">
 
@@ -101,11 +101,11 @@
             </div>
         </section>
 
-        <section  class="pt-16 pb-8 bg-sky-800">
+        <section  class="pt-16 pb-8 bg-blue-200">
           <div class="max-w-screen-xl p-5 mx-auto bg-sky-600 text-gray-100">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-0 lg:grid-rows-2">
-              <div class="relative flex items-end justify-start w-full text-left bg-sky-500 b cursor-pointer h-96 md:col-span-2 lg:row-span-2 lg:h-full group" style="background-image: url(https://st2.depositphotos.com/2369507/8210/i/380/depositphotos_82107266-stock-photo-beautiful-tajines-in-moroccoafrica.jpg);">
-                <div class="absolute top-0 bottom-0 left-0 right-0"></div>
+              <div class="relative bg-no-repeat	 flex items-end justify-start w-full text-left bg-sky-500 b cursor-pointer h-96 md:col-span-2 lg:row-span-2 lg:h-full group" style="background-image: url(https://st2.depositphotos.com/2369507/8210/i/380/depositphotos_82107266-stock-photo-beautiful-tajines-in-moroccoafrica.jpg);">
+                <div class="absolute top-0 bottom-0 bg-cover	 left-0 right-0"></div>
                 <div class="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
                   <a rel="noopener noreferrer" href="#" class="px-3 py-2 text-xs font-semibold tracking-wider uppercase hover:underline text-gray-100 bg-violet-400">Art</a>
                   <div class="flex flex-col justify-start text-center text-gray-100">

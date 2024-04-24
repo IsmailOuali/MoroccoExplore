@@ -62,6 +62,15 @@ Route::get('/client/singleBlog', function () {
     return view('client/singleBlog');
 })->name('singleBlog');
 
+Route::get('/client/about', function () {
+    return view('client/about');
+})->name('about');
+
+Route::get('/client/panier', function () {
+    return view('client/panier');
+})->name('panier');
+
+
 Route::get('/admin/dashboardAdmin', function () {
     return view('admin/dashboardAdmin');
 })->name('dashboardAdmin');

@@ -35,22 +35,6 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
         // dd($data);
        
         $user = User::create($data);
-        switch ($user->role) {
-            case 'Client':
-                $client = Client::create(['user_id'=> $user->id]);
-                return abort(redirect('/client/home'));
-
-            case 'Artisan':
-                $artisan = Artisan::create(['user_id'=> $user->id]);
-                return abort(redirect('/client/dashboard'));
-
-
-            case 'Guide':
-                $guide = Guide::create(['user_id'=> $user->id]);
-                return abort(redirect('/client/dashboardGuide'));
-
-                break; 
-            }
     }
 
     private function getArray(registerDTO $registerDTO)
@@ -65,7 +49,6 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
     }
     private function getArrayl(loginDTO $loginDTO)
     {
-       
         return [
             'email'=> $loginDTO->email,
             'password'=> $loginDTO->password,
@@ -77,22 +60,7 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
         if (Auth::attempt($data)){
             $user = Auth::user();
             echo 'login successfully';
-            switch ($user->role) {
-                case 'Client':
-                    return abort(redirect('/client/home'));
-                    break;
-                case 'Artisan':
-                    return abort(redirect('/client/dashboard'));
-                    break;
-                case 'Guide':
-                    return abort(redirect('/client/store'));
-                    break;
-                
-                default:
-                    break;
-            }
-        }else{
-            return view('login');
         }
+        
     }   
 }
