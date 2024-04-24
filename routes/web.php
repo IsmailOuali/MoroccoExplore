@@ -70,6 +70,10 @@ Route::get('/client/panier', function () {
     return view('client/panier');
 })->name('panier');
 
+Route::get('/client/chat', function () {
+    return view('client/chat');
+})->name('chat');
+
 
 Route::get('/admin/dashboardAdmin', function () {
     return view('admin/dashboardAdmin');

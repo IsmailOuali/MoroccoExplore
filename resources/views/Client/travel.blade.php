@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta content="Tour & Travels Agency Tailwind CSS Template" name="description">2
+        <meta content="Tour & Travels Agency Tailwind CSS Template" name="description">
         <meta content="Tour, Travels, agency, business, corporate, tour packages, journey, trip, tailwind css, Admin, Landing" name="keywords">
         <meta name="author" content="Shreethemes">
         <meta name="website" content="https://shreethemes.in">
