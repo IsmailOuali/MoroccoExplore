@@ -2,19 +2,18 @@
 <html lang="en" class="light scroll-smooth" dir="ltr">
     <head>
         <meta charset="UTF-8">
-        <title>Travosy - Tour & Travels Agency Tailwind CSS Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta content="Tour & Travels Agency Tailwind CSS Template" name="description">
+        <meta content="Tour & Travels Agency Tailwind CSS Template" name="description">2
         <meta content="Tour, Travels, agency, business, corporate, tour packages, journey, trip, tailwind css, Admin, Landing" name="keywords">
         <meta name="author" content="Shreethemes">
         <meta name="website" content="https://shreethemes.in">
         <meta name="email" content="support@shreethemes.in">
         <meta name="version" content="1.0.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+        
         <!-- favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
-
+        
         <!-- Css -->
         <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
         <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
@@ -22,11 +21,12 @@
         <!-- Main Css -->
         <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
         <link href="assets/css/tailwind.min.css" rel="stylesheet" type="text/css">
+        <title>Travels</title>
         <script src="https://cdn.tailwindcss.com"></script>
-
+        
     </head>
     
-    <body class="bg-black opacity-75">
+    <body class="bg-black opacity-85">
 
         @include('layouts.nav')
         <!-- Hero Start -->
