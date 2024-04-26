@@ -29,6 +29,23 @@ class ProduitController extends Controller
         'categories'=> $categories, 
     ]);
     }
+    public function storeShow(): \Illuminate\Contracts\View\View 
+    {
+        $produits = $this->repository->getAllProduits();
+        $categories = Category::all();
+        return View::make('/client/store', ['produits'=> $produits,
+        'categories'=> $categories, 
+    ]);
+    }
+
+    public function search(Request $request)
+{
+    $query = $request->input('query');
+    $produits = Produit::where('name', 'like', '%' . $query . '%')->get();
+    // Pass the search results to the view
+    return view('client.search-results', ['produits' => $produits]);
+}
+
 
     /**
      * Show the form for creating a new resource.
@@ -45,6 +62,8 @@ class ProduitController extends Controller
     {
         $storeProductDTO = storeProduitDTO::fromRequest($request);
         $this->repository->store($storeProductDTO);
+        return redirect()->route('dashboardArtisan')->with('success', 'Category deleted successfully.');
+
     }
 
     /**
@@ -78,6 +97,7 @@ class ProduitController extends Controller
     {
         $produit->delete();
 
-        return redirect()->route('categories.index')->with('success', 'produit deleted successfully.');
+        return redirect()->route('dashboardArtisan')->with('success', 'Category deleted successfully.');
+        
     }
 }

@@ -84,13 +84,18 @@ Route::post('/register', [AuthController::class , 'register'])->name('login');
 Route::post('/login', [AuthController::class , 'login']);
 
 
-Route::get('/client/dashboard', [CategoryController::class , 'index'])->name('categories.index');
+Route::get('/client/dashboard/categories', [CategoryController::class , 'index'])->name('dashboardArtisan');
 Route::post('/storeCat', [CategoryController::class , 'store']);
 Route::delete('/categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
 Route::get('/client/dashboard', [ProduitController::class , 'index'])->name('produits.index');
 Route::post('/store', [ProduitController::class , 'store']);
 Route::delete('/produits/{produit}', [ProduitController::class , 'destroy'])->name('produits.destroy');
+Route::get('/client/store', [ProduitController::class , 'storeShow'])->name('store.storeShow');
+
+Route::post('/store', [ProduitController::class , 'store'])->name('store');
+Route::get('/search', [ProduitController::class, 'search'])->name('search');
+
 
 Route::post('/storeDest', [DestinationController::class, 'store']);
 Route::get('/client/dashboardGuide', [DestinationController::class, 'index'])->name('destinations.index');

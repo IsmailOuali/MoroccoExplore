@@ -44,6 +44,8 @@ class CategoryController extends Controller
     {
         $storeCategoryDTO = storeCategoryDTO::fromRequest($request);
         $this->repository->store($storeCategoryDTO);
+        return redirect()->route('dashboardArtisan')->with('success', 'Category deleted successfully.');
+
     }
 
     /**
@@ -77,7 +79,7 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect()->route('categories.index')->with('success', 'Category deleted successfully.');
+        return redirect()->route('dashboardArtisan')->with('success', 'Category deleted successfully.');
 
     }
 }
