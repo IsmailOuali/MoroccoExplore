@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DestinationController;
@@ -82,6 +83,9 @@ Route::get('/client/chat', function () {
 Route::get('/admin/dashboardAdmin', function () {
     return view('admin/dashboardAdmin');
 })->name('dashboardAdmin');
+
+Route::get('/admin/dashboardAdmin', [UserController::class, 'index'])->name('admin.dashboard');
+
 
 
 Route::post('/register', [AuthController::class , 'register'])->name('login');

@@ -42,7 +42,6 @@ class ProduitController extends Controller
 {
     $query = $request->input('query');
     $produits = Produit::where('name', 'like', '%' . $query . '%')->get();
-    // Pass the search results to the view
     return view('client.search-results', ['produits' => $produits]);
 }
 
