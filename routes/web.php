@@ -54,6 +54,10 @@ Route::get('/client/project', function () {
     return view('client/project');
 })->name('project');
 
+Route::get('/client/addBlog', function () {
+    return view('client/addBlog');
+})->name('addBlog');
+
 Route::get('/client/singleTravel', function () {
     return view('client/singleTravel');
 })->name('singleTravel');
