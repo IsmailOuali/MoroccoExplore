@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TypeVoyageController;
 use App\Http\Controllers\DestinationController;
 
 Route::get('/', function () {
@@ -107,3 +108,5 @@ Route::get('/search', [ProduitController::class, 'search'])->name('search');
 
 Route::get('/client/dashboardGuide', [DestinationController::class, 'index'])->name('destinations.index');
 Route::post('/storeDest', [DestinationController::class, 'store']);
+
+Route::post('/storeType', [TypeVoyageController::class, 'store']);

@@ -192,13 +192,16 @@
                                   </tr>
                                 </thead>
                                 <tbody class="divide-y ">
-                                  <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">1</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">Morocco</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                                      <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Delete</button>
-                                    </td>
-                                  </tr>
+                                    @foreach ($typeVoyages as $TypeVoyage)
+                                        
+                                    <tr>
+                                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">{{ $TypeVoyage->id }}</td>
+                                      <td class="px-6 py-4 whitespace-nowrap text-sm ">{{ $TypeVoyage->name }}</td>
+                                      <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                                        <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Delete</button>
+                                      </td>
+                                    </tr>
+                                    @endforeach
                 
                                 </tbody>
                               </table>

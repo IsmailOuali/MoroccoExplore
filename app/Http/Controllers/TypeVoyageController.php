@@ -3,14 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\TypeVoyage;
+use App\Models\Destination;
+use App\DTO\storeTypeVoyageDTO;
 use App\Http\Requests\StoreTypeVoyageRequest;
 use App\Http\Requests\UpdateTypeVoyageRequest;
+use App\Repositories\TypeVoyageRepositoryInterface;
+use App\Repositories\DestinationRepositoryInterface;
+use Illuminate\Support\Facades\View;
 
 class TypeVoyageController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
+     protected $typeVoyageRepository;
+     protected $destinationRepository;
+ 
+     public function __construct(
+         TypeVoyageRepositoryInterface $typeVoyageRepository,
+         DestinationRepositoryInterface $destinationRepository
+     ) {
+        $this->typeVoyageRepository = $typeVoyageRepository;
+        $this->destinationRepository = $destinationRepository;
+     }
     public function index()
     {
         //
@@ -29,7 +45,10 @@ class TypeVoyageController extends Controller
      */
     public function store(StoreTypeVoyageRequest $request)
     {
-        //
+        $storeTypeVoyageDTO = storeTypeVoyageDTO::fromRequest($request);
+        $this->typeVoyageRepository->store($storeTypeVoyageDTO);
+        $destinations = Destination::all();
+        return redirect('/client/dashboardGuide')->with('TypeVoyages', $this->typeVoyageRepository->getAll())->with('destinations', $this->destinationRepository->getAllDestinations());
     }
 
     /**
