@@ -22,6 +22,18 @@ class AuthController extends Controller
         $registerDTO = registerDTO::fromRequest($request);
         $this->repository->register($registerDTO);
 
+        switch ($request->role) {
+            case 'Client':
+                return redirect('/client/home');
+                break;
+            case 'Artisan':
+                return redirect('/client/dashboard');
+                break;
+            case 'Guide':
+                return redirect('/client/dashboardArtisan');
+                break;
+        
+        }
     }
 
     public function login(loginRequest $request){
