@@ -54,11 +54,11 @@
                             </button>
                         </div>
                     </form>
-                </div>
+                </div> 
                 <div class="container p-2 mx-auto sm:p-4 text-gray-100">
                     <h2 class="mb-4 text-2xl font-semibold leading-tigh text-black">Invoices</h2>
                     <div class="overflow-x-auto">
-                        <table class="min-w-full text-xs">
+                        <table class="min-w-full text-xs border border-black">
                             <colgroup>
                                 <col>
                                 <col>
@@ -83,7 +83,7 @@
                                         <p>{{ $produit->name }}</p>
                                     </td>
                                     <td class="p-3">
-                                        <p>{{ $produit->category_id }}</p>
+                                        <p>{{ $produit->category_id}}</p>
                                     </td>
  
                                     <td class="p-3 text-right">
