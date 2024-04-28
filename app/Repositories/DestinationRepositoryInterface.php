@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\DTO\Auth\storeDestinationDTO;
+use App\DTO\storeDestinationDTO;
 
 interface DestinationRepositoryInterface
 {

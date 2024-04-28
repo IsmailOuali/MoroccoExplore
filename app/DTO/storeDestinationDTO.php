@@ -10,7 +10,7 @@ use App\Http\Requests\storeDestinationRequest;
 readonly class storeDestinationDTO
 {
     public function __construct(
-        public string $name,
+        public string $name
     ){
         
     }
@@ -21,7 +21,6 @@ readonly class storeDestinationDTO
         
         return new self(
             name: $validateData['name'],
-
         );
     }
 }

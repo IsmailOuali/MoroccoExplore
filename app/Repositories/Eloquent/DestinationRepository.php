@@ -3,7 +3,7 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Destination;
-use App\DTO\Auth\storeDestinationDTO;
+use App\DTO\storeDestinationDTO;
 use App\Repositories\DestinationRepositoryInterface;
 use TimWassenburg\RepositoryGenerator\Repository\BaseRepository;
 
@@ -21,10 +21,11 @@ class DestinationRepository extends BaseRepository implements DestinationReposit
     {
         parent::__construct($model);
     }
+
     public function store(storeDestinationDTO $request)
     {
         $data = $this->getArray($request);
-        $Destination = Destination::create($data);
+        $destination = Destination::create($data);
 
     }
     private function getArray(storeDestinationDTO $storeDestinationDTO)

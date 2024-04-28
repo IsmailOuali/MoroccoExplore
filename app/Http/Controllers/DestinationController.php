@@ -23,7 +23,7 @@ class DestinationController extends Controller
     public function index(): \Illuminate\Contracts\View\View 
     {
         $destinations = $this->repository->getAllDestinations();
-        return View::make('/client/dashboardGuide', ['destinations'=>$destinations]);
+        return View::make('/client/dashboardGuide', ['destinations'=> $destinations]);
     }
 
     /**
@@ -41,6 +41,8 @@ class DestinationController extends Controller
     {
         $storeDestinationDTO = storeDestinationDTO::fromRequest($request);
         $this->repository->store($storeDestinationDTO);
+        return redirect('/client/dashboardGuide')->with('destinations', $this->repository->getAllDestinations());
+
     }
 
     /**

@@ -105,5 +105,5 @@ Route::post('/store', [ProduitController::class , 'store'])->name('store');
 Route::get('/search', [ProduitController::class, 'search'])->name('search');
 
 
-Route::post('/storeDest', [DestinationController::class, 'store']);
 Route::get('/client/dashboardGuide', [DestinationController::class, 'index'])->name('destinations.index');
+Route::post('/storeDest', [DestinationController::class, 'store']);
