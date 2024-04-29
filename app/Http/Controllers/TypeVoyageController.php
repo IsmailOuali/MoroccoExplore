@@ -80,6 +80,8 @@ class TypeVoyageController extends Controller
      */
     public function destroy(TypeVoyage $typeVoyage)
     {
-        //
+        $typeVoyage->delete();
+
+        return redirect('/client/dashboardGuide')->with('TypeVoyages', $this->typeVoyageRepository->getAll())->with('destinations', $this->destinationRepository->getAllDestinations());
     }
 }

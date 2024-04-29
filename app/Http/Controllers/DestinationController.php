@@ -78,6 +78,9 @@ class DestinationController extends Controller
      */
     public function destroy(Destination $destination)
     {
-        //
+        $destination->delete();
+
+        return redirect('/client/dashboardGuide');
+
     }
 }

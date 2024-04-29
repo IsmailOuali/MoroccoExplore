@@ -108,5 +108,8 @@ Route::get('/search', [ProduitController::class, 'search'])->name('search');
 
 Route::get('/client/dashboardGuide', [DestinationController::class, 'index'])->name('destinations.index');
 Route::post('/storeDest', [DestinationController::class, 'store']);
+Route::delete('/destinations/{destination}', [DestinationController::class , 'destroy'])->name('destinations.destroy');
 
 Route::post('/storeType', [TypeVoyageController::class, 'store']);
+Route::delete('/typeVoyages/{typeVoyage}', [TypeVoyageController::class , 'destroy'])->name('typeVoyages.destroy');
+
