@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->integer('price');
             $table->foreignId('category_id')->constrained();
+            $table->string('file');
             $table->boolean('status')->default(0);
             $table->timestamps();
         });

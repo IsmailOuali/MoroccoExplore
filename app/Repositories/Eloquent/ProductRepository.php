@@ -24,8 +24,19 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 
     public function store(storeProduitDTO $request)
     {
-        $data = $this->getArray($request);
-        $produit = Produit::create($data);
+        $fileName = pathinfo($request->file->getClientOriginalName(), PATHINFO_FILENAME);
+        $extension = pathinfo($request->file->getClientOriginalName(), PATHINFO_EXTENSION);
+        $fullFileName = $fileName . "-" . time() . '.' . $request->file->getClientOriginalExtension();
+
+
+
+        $destinationPath = './assets/uploads/';
+
+        $request->file->move(public_path($destinationPath), $fullFileName);
+        $insert  = $this->getArray($request) + ['file' => $fullFileName];
+
+
+        $produit = Produit::create($insert);
         return $produit;
 
     }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\DTO\Auth;
 
+use Illuminate\Http\UploadedFile;
 use App\Http\Requests\storeProduitRequest;
 
 
@@ -12,7 +13,7 @@ readonly class storeProduitDTO
     public function __construct(
         public string $name,
         public string $description,
-        public string $file,
+        public UploadedFile $file,
         public string $category_id,
         public string $price,
     ){
