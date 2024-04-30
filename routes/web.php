@@ -20,6 +20,9 @@ Route::get('/Auth/register', function () {
     return view('Auth/register');
 });
 
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
 Route::get('/client/home', function () {
     return view('client/home');
 })->name('home');

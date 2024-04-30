@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\DTO\Auth\loginDTO;
 use Illuminate\Http\Request;
 use App\DTO\Auth\registerDTO;
-use App\DTO\Auth\loginDTO;
-use App\Http\Requests\registerRequest;
 use App\Http\Requests\loginRequest;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\registerRequest;
 use App\Repositories\UserRepositoryInterface;
 
 class AuthController extends Controller
@@ -30,7 +31,7 @@ class AuthController extends Controller
                 return redirect('/client/dashboard');
                 break;
             case 'Guide':
-                return redirect('/client/dashboardArtisan');
+                return redirect('/client/dashboardGuide');
                 break;
         
         }
@@ -40,5 +41,16 @@ class AuthController extends Controller
 
         $loginDTO = loginDTO::fromRequest($request);
         $this->repository->login($loginDTO);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/Auth/login');
     }
 }

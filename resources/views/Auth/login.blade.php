@@ -41,7 +41,7 @@
                   </span>
                 </label>
                 <label class="mt-px font-light text-white cursor-pointer select-none" htmlFor="check">
-                  Remember Me
+                  <a href="{{ route('register') }}">Don't have an account, regiter here</a>
                 </label>
               </div> 
               <div class="mt-8 flex justify-center text-lg text-black">
