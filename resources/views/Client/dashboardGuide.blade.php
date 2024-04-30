@@ -15,7 +15,7 @@
             <section class="bg-sky-200 w-1/2">
                 <div class="max-w-2xl px-4 py-8 mx-auto lg:py-16">
                     <h2 class="mb-4 text-xl font-bold text-gray-900 ">Add Voyage</h2>
-                    <form action="/store" method="post">
+                    <form action="/storeVoyage" method="post">
                         @csrf
                         <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                             <div class="sm:col-span-2">
@@ -29,23 +29,26 @@
                             </div>
                             <div class="w-full">
                                 <label class="block mb-2 text-sm font-medium text-black " for="file_input">Upload file</label>
-                                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-600 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" name="file" type="file">
+                                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-600 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" name="image" type="file">
                             </div>
                             <div>
-                                <label for="Type" class="block mb-2 text-sm font-medium text-gray-900 ">Type</label>
-                                <select name="Type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                    <option value="Electronics">Trip</option>
-                                    <option value="TV">Shop</option>
-                                    <option value="PC">Sea</option>
+                                <label for="Type" class="block mb-2 text-sm font-medium text-gray-900 ">Type voyage</label>
+                                <select name="type_voyage_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                    @foreach ($type_voyages as $type_voyage)
+                                    <option value= "">{{ $type_voyage->name }}</option>
+                                        
+                                    @endforeach
 
                                 </select>
                             </div>
                             <div>
                                 <label for="Destination" class="block mb-2 text-sm font-medium text-gray-900 ">Destination</label>
-                                <select name="Destination" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                    <option value="Electronics">Agadir</option>
-                                    <option value="TV">Marrakech</option>
-                                    <option value="PC">Tanger</option>
+                                <select name="destination_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                    @foreach ($destinations as $destination)
+                                        
+                                    <option value="">{{ $destination->name }}</option>
+                                    @endforeach
+
 
                                 </select>
                             </div>
@@ -75,31 +78,30 @@
                                 <tr class="text-left">
                                     <th class="p-3">Invoice #</th>
                                     <th class="p-3">Name</th>
-                                    <th class="p-3">Category</th>
+                                    <th class="p-3">type</th>
                                     <th class="p-3">Destination</th>
                                     <th class="p-3 text-right">price</th>
-                                    <th class="p-3">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($voyages as $voyage)
+                                    
                                 <tr class="border-b border-opacity-20 border-gray-700 bg-blue-400">
                                     <td class="p-3">
-                                        <p>97412378923</p>
+                                        <p>{{ $voyage->id }}/p>
                                     </td>
                                     <td class="p-3">
-                                        <p>Tesla Inc.</p>
+                                        <p>{{ $voyage->name }}</p>
                                     </td>
                                     <td class="p-3">
-                                        <p>14 Jan 2022</p>
-                                        <p class="text-gray-400">Friday</p>
+                                        <p>{{ $voyage->destination_id }}</p>
                                     </td>
                                     <td class="p-3">
-                                        <p>14 Jan 2022</p>
-                                        <p class="text-gray-400">Friday</p>
+                                        <p>{{ $voyage->type_voyage_id }}</p>
                                     </td>
  
                                     <td class="p-3 text-right">
-                                        <p>$275</p>
+                                        <p>${{ $voyage->price }}</p>
                                     </td>
                                     <td class="p-3 text-right flex gap-2">
                                         <button class="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
@@ -110,6 +112,7 @@
                                         </button>
                                     </td>
                                 </tr>
+                                @endforeach
 
 
                             </tbody>
@@ -198,13 +201,13 @@
                                   </tr>
                                 </thead>
                                 <tbody class="divide-y ">
-                                    @foreach ($typeVoyages as $TypeVoyage)
+                                    @foreach ($type_voyages as $type_voyage)
                                         
                                     <tr>
-                                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">{{ $TypeVoyage->id }}</td>
-                                      <td class="px-6 py-4 whitespace-nowrap text-sm ">{{ $TypeVoyage->name }}</td>
+                                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">{{ $type_voyage->id }}</td>
+                                      <td class="px-6 py-4 whitespace-nowrap text-sm ">{{ $type_voyage->name }}</td>
                                       <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                                        <form action="{{ route('typeVoyages.destroy', $TypeVoyage->id) }}" method="post">
+                                        <form action="  " method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Delete</button>

@@ -29,5 +29,9 @@ class Produit extends Model
     {
         return $this->hasOne(Category::class);
     }
+    public function panier()
+    {
+        return $this->belongsTo(Panier::class);
+    }
     
 }

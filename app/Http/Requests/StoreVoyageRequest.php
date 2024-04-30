@@ -11,7 +11,7 @@ class StoreVoyageRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,12 @@ class StoreVoyageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required',
+            'description' => 'required',
+            'image' => 'required',
+            'price' => 'required',
+            'type_voyage_id' => 'required',
+            'destination_id' => 'required',
         ];
     }
 }

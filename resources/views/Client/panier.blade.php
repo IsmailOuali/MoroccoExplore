@@ -23,8 +23,9 @@
                                     <tr>
                                         <th class="text-left font-semibold">Product</th>
                                         <th class="text-left font-semibold">Price</th>
-                                        <th class="text-left font-semibold">Quantity</th>
-                                        <th class="text-left font-semibold">Total</th>
+                                        <th class="text-left font-semibold">Delete</th>
+
+   
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -35,15 +36,11 @@
                                                 <span class="font-semibold">Product name</span>
                                             </div>
                                         </td>
-                                        <td class="py-4">$19.99</td>
+                                        <td class="py-4">$19.99</td> 
                                         <td class="py-4">
-                                            <div class="flex items-center">
-                                                <button class="border rounded-md py-2 px-4 mr-2">-</button>
-                                                <span class="text-center w-8">1</span>
-                                                <button class="border rounded-md py-2 px-4 ml-2">+</button>
-                                            </div>
-                                        </td>
-                                        <td class="py-4">$19.99</td>
+                                            <a href="/" class="py-4 text-blue-500 underline">Delete</a> 
+
+                                        </td> 
                                     </tr>
                                     <!-- More product rows -->
                                 </tbody>
@@ -59,7 +56,7 @@
                             </div>
                             <div class="flex justify-between mb-2">
                                 <span>Taxes</span>
-                                <span>$1.99</span>
+                                <span>$0.00</span>
                             </div>
                             <div class="flex justify-between mb-2">
                                 <span>Shipping</span>

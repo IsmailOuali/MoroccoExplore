@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Panier;
 use App\Models\Produit;
 use App\Models\Category;
+use Illuminate\Http\Request;
 use App\DTO\Auth\storeProduitDTO;
 use Illuminate\Support\Facades\View;
 use App\Http\Requests\StoreProduitRequest;
 use App\Http\Requests\UpdateProduitRequest;
 use App\Repositories\ProductRepositoryInterface;
+
 
 
 class ProduitController extends Controller
@@ -29,6 +32,14 @@ class ProduitController extends Controller
         'categories'=> $categories, 
     ]);
     }
+    public function storeView(): \Illuminate\Contracts\View\View 
+    {
+        $produits = $this->repository->getAllProduits();
+        $categories = Category::all();
+        return View::make('/client/store', ['produits'=> $produits,
+        'categories'=> $categories, 
+    ]);
+    }
     public function storeShow(): \Illuminate\Contracts\View\View 
     {
         $produits = $this->repository->getAllProduits();
@@ -39,11 +50,53 @@ class ProduitController extends Controller
     }
 
     public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $produits = Produit::where('name', 'like', '%' . $query . '%')->get();
+        $categories = Category::all();
+
+        return view('/client/store', ['produits' => $produits, 'categories'=> $categories]);
+    }
+    public function searchCat(Request $request)
+    {
+        $query = $request->input('query');
+        $categoryId = $request->input('category');
+
+        $produitsQuery = Produit::query();
+
+        if (!empty($query)) {
+            $produitsQuery->where('name', 'like', '%' . $query . '%');
+        }
+
+        if (!empty($categoryId)) {
+            $produitsQuery->where('category_id', $categoryId);
+        }
+
+        $produits = $produitsQuery->get();
+        $categories = Category::all();
+
+        return view('/client/store', ['produits' => $produits, 'categories'=> $categories]);
+    }
+
+    public function addCart(Request $request)
 {
-    $query = $request->input('query');
-    $produits = Produit::where('name', 'like', '%' . $query . '%')->get();
-    return view('client.search-results', ['produits' => $produits]);
+    $request->validate([
+        'product_id' => 'required|exists:produits,id',
+        'name' => 'required',
+        'price' => 'required',
+    ]);
+
+    $product_id = $request->input('product_id');
+
+    Panier::create([
+        'product_id' => $product_id,
+        'name' => $name,
+        'price'=> $price,
+    ]);
+
+    return redirect()->route('panier')->with('success', 'Product added to cart successfully.');
 }
+
 
 
     /**

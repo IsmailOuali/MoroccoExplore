@@ -3,17 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Models\Voyage;
+use App\Models\TypeVoyage;
+use App\Models\Destination;
+use App\DTO\storeVoyageDTO;
 use App\Http\Requests\StoreVoyageRequest;
 use App\Http\Requests\UpdateVoyageRequest;
+use App\Repositories\VoyageRepositoryInterface;
+use Illuminate\Support\Facades\View;
+
+
 
 class VoyageController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+
+     public function __construct(VoyageRepositoryInterface $repository)
+     {
+         $this->repository = $repository;
+     }
+
+    public function index(): \Illuminate\Contracts\View\View 
     {
-        //
+        $voyages = $this->repository->getAllVoyages();
+        $type_voyages = TypeVoyage::all();
+        $destinations = Destination::all();
+        return View::make('/client/dashboardGuide', ['voyages'=> $voyages,
+        'type_voyages'=> $type_voyages, 'destinations'=>$destinations,
+        ]);
     }
 
     /**
@@ -21,7 +39,7 @@ class VoyageController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -29,7 +47,9 @@ class VoyageController extends Controller
      */
     public function store(StoreVoyageRequest $request)
     {
-        //
+        $storeVoyageDTO = storeVoyageDTO::fromRequest($request);
+        $this->repository->store($storeVoyageDTO);
+        return redirect()->route('dashboardGuide');
     }
 
     /**

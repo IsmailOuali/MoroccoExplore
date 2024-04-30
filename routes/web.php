@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VoyageController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TypeVoyageController;
@@ -28,7 +29,7 @@ Route::get('/client/home', function () {
 })->name('home');
 
 Route::get('/client/store', function () {
-    return view('client/store');
+    return view('client/store', [ProduitController::class, 'storeView']);
 })->name('store');
 
 Route::get('/client/blog', function () {
@@ -107,6 +108,7 @@ Route::get('/client/store', [ProduitController::class , 'storeShow'])->name('sto
 
 Route::post('/store', [ProduitController::class , 'store'])->name('store');
 Route::get('/search', [ProduitController::class, 'search'])->name('search');
+Route::get('/searchCat', [ProduitController::class, 'searchCat'])->name('searchCat');
 
 
 Route::get('/client/dashboardGuide', [DestinationController::class, 'index'])->name('destinations.index');
@@ -116,3 +118,8 @@ Route::delete('/destinations/{destination}', [DestinationController::class , 'de
 Route::post('/storeType', [TypeVoyageController::class, 'store']);
 Route::delete('/typeVoyages/{typeVoyage}', [TypeVoyageController::class , 'destroy'])->name('typeVoyages.destroy');
 
+Route::get('/client/dashboardGuide', [VoyageController::class , 'index'])->name('voyages.index');
+Route::post('/storeVoyage', [VoyageController::class , 'store'])->name('voyages.store');
+
+
+Route::post('/add-to-cart', [ProduitController::class, 'addCart'])->name('add.to.cart');
