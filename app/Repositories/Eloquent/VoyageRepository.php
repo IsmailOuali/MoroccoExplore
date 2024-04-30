@@ -37,7 +37,6 @@ class VoyageRepository extends BaseRepository implements VoyageRepositoryInterfa
 
 
         $Voyages = Voyage::create($insert);
-        dd($Voyages);
         return $Voyages;
 
     }
@@ -48,7 +47,7 @@ class VoyageRepository extends BaseRepository implements VoyageRepositoryInterfa
             'name'=> $storeVoyagesDTO->name,
             'description'=> $storeVoyagesDTO->description,
             'image'=> $storeVoyagesDTO->image,
-            'type_voyage_id'=> $storeVoyagesDTO->type_voyage_id,
+            'type_voyages_id'=> $storeVoyagesDTO->type_voyage_id,
             'destination_id'=> $storeVoyagesDTO->destination_id,
             'price'=> $storeVoyagesDTO->price,
         ];

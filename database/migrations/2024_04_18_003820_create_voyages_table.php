@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('price');
             $table->foreignId('type_voyages_id')->constrained();
             $table->foreignId('destination_id')->constrained();
-            $table->boolean('status');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

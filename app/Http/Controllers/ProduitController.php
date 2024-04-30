@@ -81,17 +81,14 @@ class ProduitController extends Controller
     public function addCart(Request $request)
 {
     $request->validate([
-        'product_id' => 'required|exists:produits,id',
-        'name' => 'required',
-        'price' => 'required',
+        'produit_id' => 'required|exists:produits,id',
+  
     ]);
 
-    $product_id = $request->input('product_id');
+    $produit_id = $request->input('produit_id');
 
     Panier::create([
-        'product_id' => $product_id,
-        'name' => $name,
-        'price'=> $price,
+        'produit_id' => $produit_id,
     ]);
 
     return redirect()->route('panier')->with('success', 'Product added to cart successfully.');

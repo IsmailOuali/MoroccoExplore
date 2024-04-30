@@ -16,7 +16,7 @@ class Voyage extends Model
         'description',
         'price',
         'image',
-        'type_voyage_id',
+        'type_voyages_id',
         'destination_id',
     ];
     public function typeVoyage(): HasOne

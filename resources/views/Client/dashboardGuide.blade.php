@@ -15,7 +15,7 @@
             <section class="bg-sky-200 w-1/2">
                 <div class="max-w-2xl px-4 py-8 mx-auto lg:py-16">
                     <h2 class="mb-4 text-xl font-bold text-gray-900 ">Add Voyage</h2>
-                    <form action="/storeVoyage" method="post">
+                    <form action="/storeVoyage" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                             <div class="sm:col-span-2">
@@ -35,7 +35,7 @@
                                 <label for="Type" class="block mb-2 text-sm font-medium text-gray-900 ">Type voyage</label>
                                 <select name="type_voyage_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                     @foreach ($type_voyages as $type_voyage)
-                                    <option value= "">{{ $type_voyage->name }}</option>
+                                    <option value= "{{ $type_voyage->id }}">{{ $type_voyage->name }}</option>
                                         
                                     @endforeach
 
@@ -46,7 +46,7 @@
                                 <select name="destination_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                     @foreach ($destinations as $destination)
                                         
-                                    <option value="">{{ $destination->name }}</option>
+                                    <option value="{{ $destination->id }}">{{ $destination->name }}</option>
                                     @endforeach
 
 

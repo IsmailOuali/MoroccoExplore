@@ -186,7 +186,7 @@
                             <p class="">{{ $produit->name }}</p>
                             <form action="{{ route('add.to.cart') }}" method="POST">
                                 @csrf
-                                <input type="hidden" name="product_id" value="{{ $produit->id }}">
+                                <input type="hidden" name="produit_id" value="{{ $produit->id }}">
                                 <button type="submit" class="bg-green-200 p-2 w-24 m-auto text-black font-semibold text-xl border border-black rounded-full hover:bg-green-400">Acheter</button>
                             </form>
                         </div>

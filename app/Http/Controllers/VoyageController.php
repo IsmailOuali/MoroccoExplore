@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Voyage;
 use App\Models\TypeVoyage;
-use App\Models\Destination;
 use App\DTO\storeVoyageDTO;
+use App\Models\Destination;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 use App\Http\Requests\StoreVoyageRequest;
 use App\Http\Requests\UpdateVoyageRequest;
 use App\Repositories\VoyageRepositoryInterface;
-use Illuminate\Support\Facades\View;
 
 
 
@@ -49,7 +50,7 @@ class VoyageController extends Controller
     {
         $storeVoyageDTO = storeVoyageDTO::fromRequest($request);
         $this->repository->store($storeVoyageDTO);
-        return redirect()->route('dashboardGuide');
+        return redirect()->route('voyages.index');
     }
 
     /**

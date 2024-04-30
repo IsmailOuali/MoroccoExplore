@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use  App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use  App\Models\Category;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 
 class Produit extends Model
@@ -29,7 +30,7 @@ class Produit extends Model
     {
         return $this->hasOne(Category::class);
     }
-    public function panier()
+    public function panier(): BelongsTo
     {
         return $this->belongsTo(Panier::class);
     }
